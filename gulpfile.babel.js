@@ -1,17 +1,22 @@
-// generated on 2015-12-13 using generator-gulp-webapp 1.0.3
+// generated on 2015-12-11 using generator-gulp-webapp 1.0.3
 import gulp from 'gulp';
 import gulpLoadPlugins from 'gulp-load-plugins';
 import browserSync from 'browser-sync';
 import del from 'del';
 import {stream as wiredep} from 'wiredep';
+import axis from 'axis-css';
+import lost from 'lost';
+import poststylus from 'poststylus';
+import rucksack from 'rucksack-css';
+import rupture from 'rupture';
 
 const $ = gulpLoadPlugins();
 const reload = browserSync.reload;
 
 gulp.task('styles', () => {
-  return gulp.src('app/styles/*.css')
+  return gulp.src('app/styles/*.styl')
     .pipe($.sourcemaps.init())
-    .pipe($.autoprefixer({browsers: ['last 1 version']}))
+    .pipe($.stylus({use: [axis, lost, poststylus([rucksack({autoprefixer: true})]), rupture]}))
     .pipe($.sourcemaps.write())
     .pipe(gulp.dest('.tmp/styles'))
     .pipe(reload({stream: true}));
@@ -102,7 +107,7 @@ gulp.task('serve', ['styles', 'fonts'], () => {
     '.tmp/fonts/**/*'
   ]).on('change', reload);
 
-  gulp.watch('app/styles/**/*.css', ['styles']);
+  gulp.watch('app/styles/**/*.styl', ['styles']);
   gulp.watch('app/fonts/**/*', ['fonts']);
   gulp.watch('bower.json', ['wiredep', 'fonts']);
 });
@@ -136,6 +141,12 @@ gulp.task('serve:test', () => {
 
 // inject bower components
 gulp.task('wiredep', () => {
+  gulp.src('app/styles/*.styl')
+    .pipe(wiredep({
+      ignorePath: /^(\.\.\/)+/
+    }))
+    .pipe(gulp.dest('app/styles'));
+
   gulp.src('app/*.html')
     .pipe(wiredep({
       ignorePath: /^(\.\.\/)*\.\./
