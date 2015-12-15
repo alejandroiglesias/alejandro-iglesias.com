@@ -1,0 +1,35 @@
+//
+// Layout
+// --------------------------------------------------
+
+
+.footer,
+.sidebar
+  background-color $alabaster
+
+.sidebar
+  overflow auto
+
+  +from-width($screen-sm)
+    lost-column 1/3
+    fixed top bottom
+
+  +has(footer)
+    padding 80px 20px
+
+    +to-width($screen-sm)
+      display none
+
+.footer,
+.content
+  padding 15px
+
+.content
+  +from-width($screen-sm)
+    lost-column 2/3
+    lost-offset -1/3
+    padding 80px 30px
+
+.footer
+  +from-width($screen-sm)
+    display none

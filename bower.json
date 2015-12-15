@@ -1,7 +1,9 @@
 {
   "name": "test-frontend",
   "private": true,
-  "dependencies": {},
+  "dependencies": {
+    "Font-Awesome-Stylus": "font-awesome-stylus#~4.4.0"
+  },
   "devDependencies": {
     "chai": "~3.4.2",
     "mocha": "~2.3.4"

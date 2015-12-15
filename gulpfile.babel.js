@@ -4,7 +4,7 @@ import gulpLoadPlugins from 'gulp-load-plugins';
 import browserSync from 'browser-sync';
 import del from 'del';
 import {stream as wiredep} from 'wiredep';
-import axis from 'axis-css';
+import axis from 'axis';
 import lost from 'lost';
 import poststylus from 'poststylus';
 import rucksack from 'rucksack-css';
@@ -14,9 +14,9 @@ const $ = gulpLoadPlugins();
 const reload = browserSync.reload;
 
 gulp.task('styles', () => {
-  return gulp.src('app/styles/*.styl')
+  return gulp.src('app/styles/main.styl')
     .pipe($.sourcemaps.init())
-    .pipe($.stylus({use: [axis, lost, poststylus([rucksack({autoprefixer: true})]), rupture]}))
+    .pipe($.stylus({use: [axis(), poststylus([lost(), rucksack({autoprefixer: true})]), rupture()]}))
     .pipe($.sourcemaps.write())
     .pipe(gulp.dest('.tmp/styles'))
     .pipe(reload({stream: true}));
@@ -79,7 +79,7 @@ gulp.task('images', () => {
 gulp.task('fonts', () => {
   return gulp.src(require('main-bower-files')({
     filter: '**/*.{eot,svg,ttf,woff,woff2}'
-  }).concat('app/fonts/**/*'))
+  }).concat('app/fonts/**/*').concat('bower_components/Font-Awesome-Stylus/fonts/*'))
     .pipe(gulp.dest('.tmp/fonts'))
     .pipe(gulp.dest('dist/fonts'));
 });
@@ -153,7 +153,7 @@ gulp.task('serve:test', () => {
 gulp.task('wiredep', () => {
   gulp.src('app/styles/*.styl')
     .pipe(wiredep({
-      ignorePath: /^(\.\.\/)+/
+      //ignorePath: /^(\.\.\/)+/
     }))
     .pipe(gulp.dest('app/styles'));
 
