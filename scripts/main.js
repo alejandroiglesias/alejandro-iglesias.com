@@ -1,1 +1,1 @@
-console.log("'Allo 'Allo!");
+!function(){"use strict"}();
