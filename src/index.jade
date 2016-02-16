@@ -15,6 +15,10 @@ html(lang='en')
     link(rel='stylesheet', href='styles/main.css')
     // endbuild
 
+    // build:js scripts/main.js
+    script(src='scripts/main.js')
+    // endbuild
+
   body
     <!--[if lt IE 10]>
     <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
@@ -67,13 +71,13 @@ html(lang='en')
           ul.contact-info
             li
               i.fa.fa-envelope
-              a(href='mailto:aiglesias@deviget.com') aiglesias@deviget.com
+              script email('aiglesias', 'deviget.com')
             li
               i.fa.fa-twitter
               a(href='twitter.com/aiglesias_') twitter.com/aiglesias_
             li
               i.fa.fa-linkedin
-              a(href='linkedin.com/in/alegarciaiglesias') linkedin.com/in/alegarciaiglesias
+              a(href='http://lnked.in/aiglesias') lnked.in/aiglesias
 
 
       main.content
@@ -184,7 +188,7 @@ html(lang='en')
         ul.contact-info
           li
             i.fa.fa-envelope
-            a(href='mailto:aiglesias@deviget.com') aiglesias@deviget.com
+            script email('aiglesias', 'deviget.com')
           li
             i.fa.fa-twitter
             a(href='http://twitter.com/aiglesias_') twitter.com/aiglesias_
@@ -205,8 +209,4 @@ html(lang='en')
     // build:js scripts/vendor.js
     // bower:js
     // endbower
-    // endbuild
-
-    // build:js scripts/main.js
-    script(src='scripts/main.js')
     // endbuild
