@@ -6,6 +6,7 @@
 // Typography baseline
 
 typography()
+text-selection($highlight-color, $white)
 
 
 // Headings
@@ -59,3 +60,18 @@ font-face('proxima-nova', 'bold', 'italic')
   @extend .text-muted
   h5()
   margin-top -1em
+
+.fa
+  position relative
+  top -1px
+
+.text-size-1
+    font-size .9em
+.text-size-2
+  font-size .68em
+.text-print-size-1
+  @media print
+    font-size .9em
+.text-print-size-2
+  @media print
+    font-size .68em

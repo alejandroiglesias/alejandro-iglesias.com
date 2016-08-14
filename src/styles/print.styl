@@ -1,0 +1,48 @@
+// ==========================================================================
+// Print styles.
+// Inlined to avoid the additional HTTP request:
+// http://www.phpied.com/delay-loading-your-print-css/
+// ==========================================================================
+
+@page
+  size A4 portrait
+  margin .7in 0
+
+@page:first
+  margin-top 0
+
+@media all
+  .page-break
+    display none
+
+@media print
+  *
+    overflow visible !important
+
+  .container
+    display inline
+
+  .content
+    margin-left 1in
+    margin-right 1in
+
+  h2,
+  h3
+    page-break-after avoid
+
+  p,
+  h2,
+  h3
+    orphans 3
+    widows 3
+
+  .page-break
+    display block
+    page-break-before always
+
+
+// Make color printing precise
+
+@media print and (color)
+  *
+    print-color-adjust: exact;

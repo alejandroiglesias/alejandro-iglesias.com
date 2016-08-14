@@ -7,6 +7,10 @@
 .sidebar
   background-color $alabaster
 
+.footer
+  +to-width($screen-sm-breakpoint - 1)
+    text-align center
+
 .sidebar
   overflow auto
 
@@ -15,10 +19,13 @@
     fixed top bottom
 
   +has(footer)
-    padding 80px 20px
+    padding 20px 20px
 
     +to-width($screen-sm-breakpoint - 1)
       display none
+
+    @media print
+      text-align center
 
 .footer,
 .content
