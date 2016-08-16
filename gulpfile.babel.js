@@ -48,14 +48,10 @@ gulp.task('jade', () => {
 });
 
 gulp.task('html', ['jade', 'styles'], () => {
-  const assets = $.useref.assets({searchPath: ['.tmp', 'src', '.']});
-
   return gulp.src(['src/*.html', '.tmp/*.html'])
-    .pipe(assets)
+    .pipe($.useref({searchPath: ['.tmp', 'app', '.']}))
     .pipe($.if('*.js', $.uglify()))
     .pipe($.if('*.css', $.minifyCss({compatibility: '*'})))
-    .pipe(assets.restore())
-    .pipe($.useref())
     .pipe($.if('*.html', $.minifyHtml({conditionals: true, loose: true})))
     .pipe(gulp.dest('public'));
 });
