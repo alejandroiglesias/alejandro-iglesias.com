@@ -6,6 +6,14 @@ html(lang='en')
     meta(name='viewport', content='width=device-width, initial-scale=1')
     title Alejandro García Iglesias • Frontend Developer
 
+    // Google Analytics
+    script(async src="https://www.googletagmanager.com/gtag/js?id=UA-71460211-1")
+    script.
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'UA-71460211-1');
+
     // build:css styles/vendor.css
     // bower:css
     // endbower
@@ -216,15 +224,6 @@ html(lang='en')
             i.fa.fa-linkedin
             a(href='http://lnked.in/aiglesias') lnked.in/aiglesias
 
-
-    // Google Analytics
-    script.
-      (function(b,o,i,l,e,r){b.GoogleAnalyticsObject=l;b[l]||(b[l]=
-        function(){(b[l].q=b[l].q||[]).push(arguments)});b[l].l=+new Date;
-        e=o.createElement(i);r=o.getElementsByTagName(i)[0];
-        e.src='https://www.google-analytics.com/analytics.js';
-        r.parentNode.insertBefore(e,r)}(window,document,'script','ga'));
-      ga('create','UA-71460211-1');ga('send','pageview');
 
     // build:js scripts/vendor.js
     // bower:js
