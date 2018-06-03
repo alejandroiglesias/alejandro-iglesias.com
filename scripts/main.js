@@ -1,0 +1,1 @@
+!function(){"use strict";window.email=function(i,t){document.write('<a href="mailto:'+i+"@"+t+'">'+i+"@"+t+"</a>")}}();
