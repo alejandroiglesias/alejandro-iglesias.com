@@ -1,3 +1,24 @@
+mixin contact-info
+  ul.contact-info
+    li
+      i.fa.fa-envelope(style="margin-right:.2em")
+      script email('ale.garciaiglesias', 'gmail.com')
+    li.hidden-screen
+      i.fa.fa-globe
+      a(href='alejandrogarciaiglesias.com') alejandrogarciaiglesias.com
+    li
+      i.fa.fa-linkedin
+      a(href='https://www.linkedin.com/in/alegarciaiglesias') linkedin.com/in/alegarciaiglesias
+    li
+      i.fa.fa-stack-overflow
+      a(href='https://stackoverflow.com/users/425741') stackoverflow.com/users/425741
+    li
+      i.fa.fa-github
+      a(href='https://github.com/alejandroiglesias') github.com/alejandroiglesias
+    li
+      i.fa.fa-twitter
+      a(href='https://twitter.com/aiglesias_') twitter.com/aiglesias_
+
 doctype html
 html(lang='en')
   head
@@ -74,22 +95,7 @@ html(lang='en')
             strong Interested in working with me?
             br
             | Awesome! I'm available for full-time or freelance opportunities. Get&nbsp;in&nbsp;touch:
-          ul.contact-info
-            li.m-t-1
-              i.fa.fa-envelope
-              script email('ale.garciaiglesias', 'gmail.com')
-            li.hidden-screen.m-b-1
-              i.fa.fa-globe
-              a(href='alejandrogarciaiglesias.com') alejandrogarciaiglesias.com
-            li
-              i.fa.fa-github
-              a(href='http://github.com/alejandroiglesias') github.com/alejandroiglesias
-            li
-              i.fa.fa-twitter
-              a(href='http://twitter.com/aiglesias_') twitter.com/aiglesias_
-            li
-              i.fa.fa-linkedin
-              a(href='http://lnked.in/aiglesias') lnked.in/aiglesias
+          +contact-info
 
 
       main.content
@@ -207,22 +213,7 @@ html(lang='en')
           strong Interested in working with me?
           br
           | Awesome! I'm available for full-time or freelance opportunities. Get&nbsp;in&nbsp;touch:
-        ul.contact-info
-          li
-            i.fa.fa-envelope
-            script email('ale.garciaiglesias', 'gmail.com')
-          li.hidden-screen
-            i.fa.fa-globe
-            a(href='alejandrogarciaiglesias.com') alejandrogarciaiglesias.com
-          li
-            i.fa.fa-github
-            a(href='http://github.com/alejandroiglesias') github.com/alejandroiglesias
-          li
-            i.fa.fa-twitter
-            a(href='http://twitter.com/aiglesias_') twitter.com/aiglesias_
-          li
-            i.fa.fa-linkedin
-            a(href='http://lnked.in/aiglesias') lnked.in/aiglesias
+        +contact-info
 
 
     // build:js scripts/vendor.js
