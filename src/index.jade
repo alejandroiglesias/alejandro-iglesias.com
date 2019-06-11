@@ -28,7 +28,7 @@ html(lang='en')
     title Alejandro García Iglesias • Frontend Developer
 
     // Google Analytics
-    script(async src="https://www.googletagmanager.com/gtag/js?id=UA-71460211-1")
+    script(src="https://www.googletagmanager.com/gtag/js?id=UA-71460211-1" async)
     script.
       window.dataLayer = window.dataLayer || [];
       function gtag(){dataLayer.push(arguments);}
@@ -41,7 +41,7 @@ html(lang='en')
     // endbuild
 
     // build:css styles/main.css
-    link(rel='stylesheet', href='styles/main.css')
+    link(href='styles/main.css', rel='stylesheet')
     // endbuild
 
     // build:js scripts/main.js
@@ -114,86 +114,185 @@ html(lang='en')
             div Elementary proficiency
 
         h2(id='work-experience') Work Experience
+
         h3 Mapme
           | &nbsp;
           small 2016–current
         .position Front-end Developer
         p Currently working in the product UI built in Angular.js which connects to a Meteor backend. Designed and built new components, applied design changes and refactored the codebase.
+        ul.skills-list.text-print-size-2
+          li JavaScript
+          li Angular.js
+          li Vue
+          li CSS
+          li Sass
+          li HTML5
+          li Node.js
+          li Meteor
+          li MongoDB
+          li Git
+          li jQuery
+          li SMACSS/OOCSS
+          li Team Work
+          li User Interface Design
+          li Creativity
+
         h3 UpLabs
           | &nbsp;
           small 2016
         .position Front-end Developer
         p Developed the Angular.js app UI, built new components, migrated components to React and applied design changes in Sass and Rails' templates.
+        ul.skills-list.text-print-size-2
+          li JavaScript
+          li Angular.js
+          li React
+          li CSS
+          li Sass
+          li HTML5
+          li Git
+          li jQuery
+          li SMACSS/OOCSS
+
         h3 Lendsnap
           | &nbsp;
           small 2016
         .position Front-end Developer
         p Developed the app UI in Angular.js, helped establish coding standards on the front-end team, refactored old code and wrote unit tests.
+        ul.skills-list.text-print-size-2
+          li JavaScript
+          li Angular.js
+          li CSS
+          li Sass
+          li HTML5
+          li Git
+          li Testing
+          li SMACSS/OOCSS
+          li User Interface Design
+          li Scrum
+
         h3 Deviget
           | &nbsp;
           small 2013 to 2016
         .position Front-end Developer
         p Worked for two years with a client—from the online advertising industry—on a big application with large pieces of business logic on the front-end. Dived deeper into Angular.js and wrote many components with unit tests. Wrote some E2E tests with the QA team. Established a scalable and modular architecture for CSS, refactored the styles, developed a Style Guide with visual patterns and researched about visual style testing. Learned more about Scrum and distributed team work. Also, worked with another client—from the security industry—building a UI in React for managing security policies.
+        ul.skills-list.text-print-size-2
+          li JavaScript
+          li Angular.js
+          li CSS
+          li Less
+          li HTML5
+          li Git
+          li Testing
+          li React
+          li jQuery
+          li SMACSS/OOCSS
+          li User Interface Design
+          li Scrum
+
         h3 iSolutions Pro
           | &nbsp;
           small 2013
         .position Front-end Developer
         p Worked on the real-time interaction of the web app version of a bidding game. Being my first remote work I learned communication and coordination good and bad practices with a distributed team.
+        ul.skills-list.text-print-size-2
+          li JavaScript
+          li Angular.js
+          li CSS
+          li Sass
+          li HTML5
+          li Git
+          li SMACSS/OOCSS
+
         h3 Vulsai
           | &nbsp;
           small 2012 to 2013
         .position Front-end Developer
         p Worked side-by-side with team’s designer, introducing into the workflow tools like Sass and Compass, a modular architecture for CSS and also Responsive Web Design, Mobile First, and Progressive Enhancement best practices. Accomplished a wide variety of JavaScript projects—aside from regular webapps—from Node.js back-end processing scripts to critical embeddable third-party widgets and a data visualization app. Incorporated a build process on the team.
-        h3 Yanma Solutions
-          | &nbsp;
-          small 2011 to 2012
-        .position Full-stack Developer
-        p Established team development standards and trained newcomers into them. Interviewed candidates. Developed a variety of web projects, the most important of them, a critical real-time auctions application.
-        h3 Freelance Full-stack Developer
-          | &nbsp;
-          small 2010 to 2011
-        .position Full-stack Developer
-        p Worked with local clients on a variety of projects. Learned requirements gathering, estimation and organization skills.
-        .page-break
-        h3 Crossmedia Digital Marketing
-          | &nbsp;
-          small 2010
-        .position PHP Developer
-        p.hidden-print As the main developer assigned to the new corporate web of Starbucks Mexico I conducted an investigation to select and implement a new cutting-edge CMS that could integrate nicely with the Symfony framework which was finally adopted by the team. I improved my skills to work inside of an interdisciplinary team of project managers, designers, and other developers.
-        h3 2mas2 Interactive
-          | &nbsp;
-          small 2008 to 2009
-        .position PHP Developer
-        p.hidden-print Responsible for developing backends to serve dynamic content and process user interactions of Flash-based applications<span class="hidden-screen">.</span> <span class="hidden-print">for big interactive advertising campaigns. Developed a reusable platform for these apps. Participated in establishing development standards and trained the newcomers. Learned ActionScript.</span>
-        h3 Syxmedia
-          | &nbsp;
-          small 2007 to 2008
-        .position Web Developer
-        p.hidden-print Acquired and expanded knowledge on web development and best practices. Coded mockups and dynamic websites, worked on both front-end and back-end using a PHP framework developed in-house.
-
-        h2(id='skills') Skills and Personal Attributes
         ul.skills-list.text-print-size-2
           li JavaScript
           li CSS
           li Sass
           li HTML5
           li Node.js
-          li Meteor
           li Less
-          li User Experience
+          li jQuery
+          li D3.js
           li Git
-          li User Interface
-          li Testing
-          li Angular.js
-          li React
+          li Information Architecture
+          li SMACSS/OOCSS
+
+        h3 Yanma Solutions
+          | &nbsp;
+          small 2011 to 2012
+        .position Full-stack Developer
+        p Established team development standards and trained newcomers into them. Interviewed candidates. Developed a variety of web projects, the most important of them, a critical real-time auctions application.
+        ul.skills-list.text-print-size-2
+          li JavaScript
+          li CSS
+          li HTML5
           li jQuery
           li PHP
           li MySQL
-          li MongoDB
-          li Mac OS X
-          li Object Oriented Design
-          li Information Architecture
+          li SVN
+          li Scrum
+
+        h3 Freelance Full-stack Developer
+          | &nbsp;
+          small 2010 to 2011
+        .position Full-stack Developer
+        p Worked with local clients on a variety of projects. Learned requirements gathering, estimation and organization skills.
+        .page-break
+        ul.skills-list.text-print-size-2
+          li JavaScript
+          li CSS
+          li HTML5
+          li jQuery
+          li PHP
+          li MySQL
+          li SVN
+
+        h3 Crossmedia Digital Marketing
+          | &nbsp;
+          small 2010
+        .position PHP Developer
+        p.hidden-print As the main developer assigned to the new corporate web of Starbucks Mexico I conducted an investigation to select and implement a new cutting-edge CMS that could integrate nicely with the Symfony framework which was finally adopted by the team. I improved my skills to work inside of an interdisciplinary team of project managers, designers, and other developers.
+        ul.skills-list.text-print-size-2
+          li PHP
+          li MySQL
+          li SVN
+
+        h3 2mas2 Interactive
+          | &nbsp;
+          small 2008 to 2009
+        .position PHP Developer
+        p.hidden-print Responsible for developing backends to serve dynamic content and process user interactions of Flash-based applications<span class="hidden-screen">.</span> <span class="hidden-print">for big interactive advertising campaigns. Developed a reusable platform for these apps. Participated in establishing development standards and trained the newcomers. Learned ActionScript.</span>
+        ul.skills-list.text-print-size-2
+          li JavaScript
+          li CSS
+          li jQuery
+          li PHP
+          li MySQL
+          li SVN
+
+        h3 Syxmedia
+          | &nbsp;
+          small 2007 to 2008
+        .position Web Developer
+        p.hidden-print Acquired and expanded knowledge on web development and best practices. Coded mockups and dynamic websites, worked on both front-end and back-end using a PHP framework developed in-house.
+        ul.skills-list.text-print-size-2
+          li JavaScript
+          li CSS
+          li HTML
+          li jQuery
+          li PHP
+          li MySQL
+
+        h2(id='skills') Other Skills and Attributes
+        ul.skills-list.text-print-size-2
+          li User Interface Design
+          li Atomic Design
           li SMACSS/OOCSS
+          li Information Architecture
           li Scrum
           li Team Work
           li Creativity
