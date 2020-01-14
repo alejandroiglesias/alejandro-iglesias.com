@@ -216,9 +216,12 @@ gulp.task(
   })
 )
 
-gulp.task("deploy", () => {
-  return gulp.src("./public/**/*").pipe($.ghPages())
-})
+gulp.task(
+  "deploy",
+  gulp.series(del.bind(null, [".publish"]), () => {
+    return gulp.src("./public/**/*").pipe($.ghPages())
+  })
+)
 
 gulp.task(
   "default",
