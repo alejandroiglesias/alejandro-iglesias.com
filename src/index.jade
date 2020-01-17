@@ -2,7 +2,7 @@ mixin contact-info
   ul.contact-info
     li
       i.fa.fa-envelope(style="margin-right:.2em")
-      script email('ale.garciaiglesias', 'gmail.com')
+      a(data-email="ale.garciaiglesias,gmail.com", target="_blank")
     li.hidden-screen
       i.fa.fa-globe
       a(href='https://alejandroiglesias.github.io/cv/') alejandroiglesias.github.io/cv
@@ -42,10 +42,6 @@ html(lang='en')
 
     // build:css styles/main.css
     link(href='styles/main.css', rel='stylesheet')
-    // endbuild
-
-    // build:js scripts/main.js
-    script(src='scripts/main.js')
     // endbuild
 
   body
@@ -304,4 +300,12 @@ html(lang='en')
     // build:js scripts/vendor.js
     // bower:js
     // endbower
+    // endbuild
+
+    script(src="https://cdn.jsdelivr.net/npm/short-unique-id@1.1.1/dist/short-unique-id.min.js")
+    script(src="https://cdn.jsdelivr.net/npm/jquery@3.4.1/dist/jquery.min.js")
+    script(src="https://cdn.jsdelivr.net/npm/vala@1.0.3/dist/vala.jquery.min.js")
+
+    // build:js scripts/main.js
+    script(src='scripts/main.js')
     // endbuild
