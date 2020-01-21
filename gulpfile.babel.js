@@ -1,5 +1,6 @@
 // generated on 2015-12-11 using generator-gulp-webapp 1.0.3
 import gulp from "gulp"
+import babel from "gulp-babel"
 import gulpLoadPlugins from "gulp-load-plugins"
 import browserSync from "browser-sync"
 import del from "del"
@@ -38,6 +39,7 @@ gulp.task("scripts", () => {
       .pipe($.plumber())
       // .pipe($.sourcemaps.init())
       // .pipe($.sourcemaps.write('.'))
+      .pipe(babel({ presets: [["env", { targets: { browsers: [">0.5%"] } }]] }))
       .pipe(gulp.dest(".tmp/scripts"))
       .pipe(reload({ stream: true }))
   )
@@ -76,7 +78,7 @@ gulp.task(
     return gulp
       .src(["src/*.html", ".tmp/*.html"])
       .pipe($.useref({ searchPath: [".tmp", "app", "."] }))
-      .pipe($.if("*.js", $.uglify({ compress: { drop_console: true } })))
+      .pipe($.if("*.js", $.terser()))
       .pipe($.if("*.css", $.minifyCss({ compatibility: "*" })))
       .pipe($.if("*.html", $.minifyHtml({ conditionals: true, loose: true })))
       .pipe(gulp.dest("public"))
