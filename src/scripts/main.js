@@ -25,7 +25,7 @@
 
   const uid = new ShortUniqueId()
   const urlParams = new URLSearchParams(location.search)
-  const uuid = "f241f6fb-c90e-482b-bf8d-574daab4b303"
+  const uuid = "d9a0aefe-5933-4def-96c8-d5cf113a5052"
 
   let highlightConfig = {}
   let isHighlightingEnabled = false
