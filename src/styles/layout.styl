@@ -3,6 +3,9 @@
 // --------------------------------------------------
 
 
+.container
+  position relative
+
 .footer,
 .sidebar
   background-color $alabaster
@@ -12,11 +15,9 @@
     text-align center
 
 .sidebar
-  overflow auto
-
   +from-width($screen-sm-breakpoint)
     lost-column 1/3
-    fixed top bottom
+    absolute top bottom
 
   +has(footer)
     padding 20px 20px

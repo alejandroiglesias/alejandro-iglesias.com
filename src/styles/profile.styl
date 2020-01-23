@@ -4,10 +4,9 @@
 
 
 .profile
-  padding 80px 0 0
+  padding 70px 0 30px
   background-color $gallery
   text-align center
-  border-bottom 1px solid $alto
 
   +has(picture)
     img-circle()
@@ -30,7 +29,6 @@
   +has(location)
     italic()
     font-size 1.1rem
-    margin-bottom 30px
 
     .fa
       color lighten($storm-dust, 25%)
