@@ -1,0 +1,15 @@
+.button
+  button $chetwode-blue
+  background-color var(--primary-color)
+  color var(--body-bg)
+  font-size 1rem
+
+  &:focus,
+  &:hover
+    background-color var(--primary-color-dark)
+    color var(--body-bg)
+
+.button-responsive
+  +to-width($screen-xs-breakpoint - 1)
+    display block
+    width 100%
