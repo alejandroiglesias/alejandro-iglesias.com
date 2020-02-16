@@ -5,7 +5,7 @@
 
 .profile
   padding 70px 0 30px
-  background-color $gallery
+  background-color var(--surface-overlay-2)
   text-align center
 
   +has(picture)
@@ -23,15 +23,16 @@
   +has(title)
     bold()
     h4()
-    color $storm-dust
+    color var(--text-color-lo-emphasis)
     margin-top 0
 
   +has(location)
+    color var(--text-color-hi-emphasis)
     italic()
     font-size 1.1rem
 
     .fa
-      color lighten($storm-dust, 25%)
+      color var(--text-color-muted)
       margin-right 0.5em
 
     +has(value)

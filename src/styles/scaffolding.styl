@@ -7,6 +7,32 @@
 
 base()
 
+:root
+  --body-bg $white
+  --text-color-hi-emphasis rgba($black, 0.87)
+  --text-color-lo-emphasis rgba($black, 0.6)
+  --text-color-muted rgba($black, 0.38)
+  --primary-color $chetwode-blue
+  --primary-color-dark $rich-blue
+  --surface-overlay-24 rgba($black, .10)
+  --surface-overlay-2 rgba($black, .045)
+  --surface-overlay-1 rgba($black, .025)
+
+  @media (prefers-color-scheme: dark)
+    --body-bg $onyx
+    --text-color-hi-emphasis rgba($white, 0.87)
+    --text-color-lo-emphasis rgba($white, 0.6)
+    --text-color-muted rgba($white, 0.38)
+    --primary-color $wistful
+    --primary-color-dark $portage
+    --surface-overlay-24 rgba($white, .16)
+    --surface-overlay-2 rgba($white, .07)
+    --surface-overlay-1 rgba($white, .05)
+
 html
   // Apply responsive typography to <html> since other elements scale through rem.
   font-size responsive 16px 21px
+
+body
+  background-color var(--body-bg)
+  color var(--text-color-hi-emphasis)

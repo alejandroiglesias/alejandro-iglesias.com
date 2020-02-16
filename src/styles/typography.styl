@@ -15,12 +15,12 @@ h1, h2, h3, h4, h5, h6
   margin 1em 0 .5em 0
 
 h2
-  color $portage
+  color var(--primary-color)
 
   small,
   .small
     bold()
-    color $storm-dust
+    color var(--text-color-lo-emphasis)
     font-size .6em
 
 
@@ -33,7 +33,7 @@ h2
 // Contextual colors
 
 .text-muted
-  color $storm-dust
+  color var(--text-color-muted)
 
 
 // Lists
@@ -60,10 +60,10 @@ font-face('proxima-nova', 'bold', 'italic')
 // Various
 
 abbr[title]
-  border-bottom: none;
+  border-bottom none
 
 .position
-  @extend .text-muted
+  color var(--text-color-lo-emphasis)
   h5()
   margin-top -1em
 
